@@ -65,6 +65,10 @@ $superheroes = [
 
 ?>
 
+<?php
+    header('Access-Control-Allow-Origin: *');
+?>
+
 <ul>
 <?php foreach ($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
