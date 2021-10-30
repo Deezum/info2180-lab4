@@ -1,0 +1,40 @@
+body {
+    background-color:rgb(224, 224, 224);
+    margin: 0px;
+    font-size: 18px; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",Roboto, "Helvitca Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+}
+
+h1{ 
+    display: flexbox;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+header{
+    background-color: #4059a8;
+    text-align: center;
+    padding: 5px;
+    border: 5px;
+    margin: 5px;
+} 
+
+.searchsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    background-color: rgb(224, 224, 224);
+}
+
+.btn1{
+    height: 20px;  
+    background-color: #be1212;
+    color: white;
+}
