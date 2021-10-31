@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(224, 224, 224);
+    background-color: rgb(228, 228, 228);
     margin: 0px;
     font-size: 18px; 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",Roboto, "Helvitca Neue", Arial, "Noto Sans", sans-serif;
@@ -7,8 +7,23 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1000px;
     width: 100%;
+}
+
+#result h1{
+    color:crimson;
+    font-size: 24px;
+}
+
+#result h2{
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+#result h3{
+    font-size: 18px;
+    margin-bottom: 250px;
 }
 
 h1{ 
@@ -19,22 +34,77 @@ h1{
 }
 
 header{
-    background-color: #4059a8;
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://collider.com/wp-content/uploads/avengers-character-poster-banner.jpeg);
+    color: #e8e8e8;
     text-align: center;
-    padding: 5px;
-    border: 5px;
-    margin: 5px;
+    padding: 65px;
+    border: 1px;
+    margin: 0px;
+    font-weight: bolder;
 } 
 
-.searchsection{
-    display: flex;
+h4{
+    font-size: 25px; 
+    padding-right: 130px; 
+}
+
+h2{
+    margin-bottom: -10px;
+    display: flexbox;
     align-items: center;
-    justify-content: space-around; 
-    background-color: rgb(224, 224, 224);
+    font-size: 30px;  
+}
+
+.sep{
+    float: left;
+}
+
+.searchsection{
+    margin: 0px 200px;
+    background-color: rgb(228, 228, 228);;
+    border-radius: 1%;
+}
+
+.resultcontent{
+    padding-left: 130px;
+
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
 }
 
 .btn1{
-    height: 20px;  
-    background-color: #be1212;
+    height: 55px;
+    width: 100px;  
+    background-color: crimson;
     color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.inputfield[type="text"]{
+    padding: 20px 10px; 
+    line-height: 15px; 
+    width: 800px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    padding-top: 40px;
+    margin-top: 199px;
+    background: #4A5568;
+    color: white;
+    padding: 27px;
 }
