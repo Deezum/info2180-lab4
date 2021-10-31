@@ -1,23 +1,28 @@
-function searchbtn(){
-  var subbutton = document.querySelector("button");
-   console.log(subbutton);
-   subbutton.addEventListener("click", getemail);
+
+
+function search(){
+  var btn = document.querySelector("button");
+   btn.addEventListener("click", alertnotif);
+  
 }
 
-function getemail(){
-  var http = new XMLHttpRequest();
-  http.onreadystatechange = function(){
-      if(http.readyState == 4 && http.status ==200){
-          alert(http.response);
+function alertnotif(){
+  const inputting = document.querySelector("input").value;
+  var result = document.getElementById("result");
+  var dhttp = new XMLHttpRequest();
+  dhttp.onreadystatechange = function(){
+      if(this.readyState == XMLHttpRequest.DONE && this.status ==200){
+          result.innerHTML = dhttp.responseText; 
       }
   }
-  var url = "http://localhost:/info2180-lab4/superheroes.php";
-  http.open('GET', url, true);
-  http.send();
-  console.log(http);
+
+
+  var url = "http://localhost:/info2180-lab4/superheroes.php?inputting=";
+  dhttp.open("GET", url+inputting, true);
+  dhttp.send();
 }
 
 
 window.addEventListener("DOMContentLoaded",function(){
-  searchbtn();
+  search();
 })
