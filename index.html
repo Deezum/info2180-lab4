@@ -13,18 +13,24 @@
             <h1> AVENGERS CHARACTER SEARCH</h1>
         </header>
     <main>
-       <section class="searchsection">
+        <section class="searchsection">
             <div class="container">
-                <h4> Search by Full Name or Alias</h4>
-                   <!--form method = "GET" id ="trial" action ="superheroes.php"-->
-                       <input class = "inputfield" type="text"  id="inputform" name='search' placeholder="eg. Captain America or Steve Rogers">
-                       <button type="button" class="btn1" id = sbutton type ="submit"> Search </button>
-                     </form>
+                <form id ="form" class= "formcontent"></form>
+                    <h4> Search by Full Name or Alias</h4>
+                    <input class = "inputfield" type="text"  id="inputform" name='search' placeholder="eg. Captain America or Steve Rogers">
+                    <button type="button" class="btn1" id = sbutton type ="submit"> Search </button>
             </div>
-       </section>
-       <div id = "result">
-           <h2> RESULTS</h2>
+                </form>
+          <section class ="resultcontent">
+       <div class = "sep"></div>
+           <h2> Results </h2>
+        <div class = "sep"></div>
+        <div id= "result" class= "notif">
+            <p> Press search for list of heroes </p>
+        </div>
        </div>
+          </section>
+        </section>
     </main> 
     <footer>
         <div class="container">
