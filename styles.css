@@ -26,6 +26,12 @@ body {
     margin-bottom: 250px;
 }
 
+#result h4{
+    font-size: 18px;
+    margin-bottom: 250px;
+    color: crimson;
+}
+
 h1{ 
     display: flexbox;
     align-items: center;
