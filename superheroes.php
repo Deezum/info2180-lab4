@@ -69,8 +69,35 @@ $superheroes = [
     header('Access-Control-Allow-Origin: *');
 ?>
 
+
 <ul>
+<?php $input = $_REQUEST['inputting'];?>
 <?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
+    <?php if($input == ""):?>
+        <li><?= $superhero['alias']; ?></li>
+    <?php endif; ?>
 <?php endforeach; ?>
 </ul>
+
+
+
+
+<?php $input = $_REQUEST['inputting'];?>
+<?php $state = "FALSE";?>
+<?php foreach ($superheroes as $superhero):?>
+    <?php if($input == $superhero['name'] || $input == $superhero['alias']):?>
+        <?php $state = "TRUE";?> 
+    <?php break ?>    
+    <?php endif;?>
+<?php endforeach;?>
+
+<?php if($state == "TRUE"):?>
+        <h1><?= $superhero['name']; ?></h1>
+        <h2><?= "A.K.A"." ". $superhero['alias']; ?></h2>
+        <h3><?= $superhero['biography']; ?></h3>
+<?php endif;?>
+        
+
+<?php if($state != "TRUE" && $input != ""):?>
+        <h4><?= "SUPERHERO NOT FOUND"; ?></h3> 
+<?php endif;?>
